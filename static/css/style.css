@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.hero{
+    height: 87vh;
+    width: 100%;
+    background-image:url("../image/back.webp"););
+    background-size: cover;
+}
+.content{
+    height: 17vh;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content h2{
+    color: aliceblue;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+.content ul li {
+    position: relative;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 8px;
+    border-bottom: 3px solid transparent;
+}
+.content ul li a{
+    text-transform: uppercase;
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+}
+.content ul li a:hover{
+    border-bottom: 3px solid #FFDE4D;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.main-text{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.main-text h1{
+    color:aliceblue;
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow:2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.main-text p{
+    color: aliceblue;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+}
+.b1{
+    border-radius:25px ;
+    position: relative;
+    width: 200px;
+    padding: 6px 13px;
+    text-align: center;
+    margin: 20px 10px;
+    font-weight:800;
+    border: 1px solid black ;
+    background:aliceblue;
+    color:#c69d0b;
+    font-size: 18px;
+    cursor: pointer;
+    overflow: hidden;
+    text-shadow: 1px 5px 2px 5px  rgba(0, 0, 0, 0.9);
+}
+
+/* navabar complited */
+
+.collection{
+    background-color:rgb(219, 231, 243);
+    margin-top: 0px;
+    padding: 20px;
+}
+#gallary .nav a{
+    padding:5px;
+    color: black;
+}
+#gallary .nav a:hover{
+    border-bottom: 3px solid #e3b104;
+}
+/* dine gallary */
+#dine .card img{
+
+}
+#dine .card img:hover{
+  transform: scale(1.1);
+  border-radius:30px;
+}
+.main-gall img{
+background:cover;
+width:100%;
+height:90vh;
+}
+#expirience  img:hover{
+  transform:scale(1.1);
+  border-radius:30px;
+}
+#Resort img:hover{
+  transform:scale(1.1);
+  border-radius:30px;
+}
+#Wedding img:hover{
+  transform:scale(1.1);
+  border-radius:30px;
+}

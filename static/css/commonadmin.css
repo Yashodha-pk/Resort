@@ -1,0 +1,60 @@
+
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+        .navbar {
+            background-color: #35858B;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 30px 40px;
+            text-decoration: none;
+            font-size: 18px;
+            border-right: 1px solid #ddd;
+        }
+
+        .navbar a:last-child {
+            border-right: none;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            color: #f4f4f4;
+        }
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+
+      /* @media screen and (max-width: 600px) {
+            .navbar a {
+                float:none;
+                width:100%;
+                text-align:left;
+            }
+        }
+      */
+
+        /* Content section below the navbar */
+        .content {
+            padding: 20px;
+            margin-top: 60px; /* Add margin to avoid content getting hidden under navbar */
+        }

@@ -1,0 +1,40 @@
+* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #35858B; /* Dark Blue background */
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 90px; /* Spacing between navbar items */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ecf0f1; /* Light gray text */
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Hover effects for links */
+.navbar ul li a:hover{
+color:black;
+}

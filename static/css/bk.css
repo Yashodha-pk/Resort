@@ -1,0 +1,111 @@
+
+    /* Global Reset for body */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        color: #3b5998;
+        font-size: 2.5rem;
+        margin-top: 20px;
+    }
+
+    /* Table Style */
+    table {
+        width: 100%;
+        max-width: 600px;
+        margin: 30px auto;
+        border-collapse: collapse;
+        background: linear-gradient(45deg, #ff99cc, #66ccff);
+        border-radius: 8px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: left;
+        font-size: 1.1rem;
+    }
+
+    th {
+        background-color: #ff6347;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px 8px 0 0;
+    }
+
+    td {
+        background-color: #fff;
+        color: #333;
+        border-bottom: 2px solid #ddd;
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* Form Input Style */
+    input[type="text"], select, input[type="file"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    input[type="text"]:focus, select:focus, input[type="file"]:focus {
+        outline: none;
+        border-color: #ff6347;
+        box-shadow: 0 0 5px rgba(255, 99, 71, 0.6);
+    }
+
+    /* Submit Button Style */
+    input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #ff6347;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #ff4500;
+    }
+
+    /* Hover Effects for Table Rows */
+    tr:hover {
+        background-color: #ffebcd;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Message Styling */
+    .msg {
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        background-color: #f0f0f0;
+        border-left: 5px solid #ff6347;
+        color: #555;
+        font-size: 1.1rem;
+        border-radius: 8px;
+    }
+
+    .msg.success {
+        border-left-color: #4caf50;
+        background-color: #dff0d8;
+    }
+
+    .msg.error {
+        border-left-color: #f44336;
+        background-color: #f2dede;
+    }
+
+

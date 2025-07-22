@@ -1,0 +1,15 @@
+/* Style for the container with background image */
+.background-container {
+    position: relative; /* To position the text over the background */
+    background-image: url("{% static 'images/Admin.jpg' %}");
+    background-size: cover; /* Ensure the background covers the entire container */
+    background-position: center; /* Center the image */
+    height: 400px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center; /* Horizontally center the <h1> */
+    align-items: center; /* Vertically center the <h1> */
+    color: white; /* Make the text white for contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Adds shadow for better text readability */
+}
+
+

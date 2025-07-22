@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+form{
+
+}
+table{
+text-align:center;
+margin-left:30%;
+border-radius:50px;
+}
+tr,td,th{
+padding:25px 50px;
+margin:10px 20px;
+}
+
