@@ -1,0 +1,46 @@
+{% extends "commonadmin.html" %}
+ {% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="{% static 'css/cdetail.css' %}" type="text/css">
+  <style>
+    th{
+    background-color:#88304E;
+    text-align:center;
+    }
+    td{
+    text-align:center;
+    font-weight:bold;
+    font-size:16px;
+    }
+
+  </style>
+</head>
+<body style="background-color:lightgray;">
+<table border="1px solid black" cellpadding="9px" cellspacing="0">
+  <tr>
+    <th>Customer ID</th>
+    <th>First Name</th>
+
+    <th>Email ID</th>
+    <th>Phone Number</th>
+    <th>Password</th>
+  </tr>
+  {% for d in Data %}
+  <tr>
+  <td>{{d.id}}</td>
+  <td>{{d.fname}}</td>
+
+  <td>{{d.email}}</td>
+  <td>{{d.Phn}}</td>
+  <td>{{d.pwd}}</td>
+
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}

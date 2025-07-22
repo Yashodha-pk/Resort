@@ -1,0 +1,80 @@
+{% extends "commonadmin.html" %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Form</title>
+    <style>
+    body{
+    background-color:lightgray;
+    }
+    table{
+        margin-left:30%;
+        box-shadow: 0px 1px 1px 1px black;
+        padding:30px;
+        background-color:#A64D79;
+        border-radius:10px;
+
+    }
+    input ,select,textarea{
+    border-radius:5px;
+    padding:8px;
+    }
+    th{
+    font-weight:600;
+    color:black;
+    }
+    .button{
+    background-color:#73EC8B;
+    font-weight:bold;
+    font-size:16px;
+    border-radius:10px;
+    padding:10px;
+    }
+    h3{
+    text-align:center;
+    color:#243642;
+    font-weight:bold;
+    }
+</style>
+</head>
+<body>
+<form action="{% url 'U_Event' id=u_event.id  %} " method="post" enctype="multipart/form-data">
+   {{msg}}
+    {%  csrf_token %}
+    <table>
+        <tr>
+            <th><label>Event ID</label></th>
+            <th><input type="text" name="id" value="{{u_event.id}}"></th>
+        </tr>
+        <tr>
+            <th><label>Event Name</label></th>
+            <th><input type="text" name="etype" value="{{u_event.etype}}"></th>
+        </tr>
+      <tr>
+      <th><label>Flower Image</label></th>
+            <th><input type="file" name="eimage"></th>
+            {% if u_event.eimage %}
+            <img src="{{u_event.eimage.url}}" width="200px" height="200px" style="margin-left:30%;"/>
+            {% endif %}
+        </tr>
+        <tr>
+            <th><label>Event Price</label></th>
+            <th><input type="text" name="eprice" value="{{u_event.eprice}}"></th>
+        </tr>
+      <tr>
+            <th><label>Event Description</label></th>
+            <th><input type="text" name="edes" value="{{u_event.edes}}"></th>
+        </tr>
+        <tr>
+
+            <th><input type="submit" value="Update Events" class="button"></th>
+        </tr>
+    </table>
+</form>
+
+
+</body>
+</html>
+{% endblock %}

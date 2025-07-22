@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div iframe{
+        margin-left:40%;
+        margin-top:30px;
+        }
+.main {
+            text-align: center;
+            font-family: "Times New Roman";
+        }
+
+        .marq {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .geek1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #077A7D;
+            text-align: center;
+        }
+        button{
+        padding:12px;
+        border-radius:5px;
+        background-color:#077A7D;
+        font-size:20px;
+        font-weight:600;
+        margin-left:90%;
+        }
+        a{
+        color:white;
+        text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+<button><a href="{% url 'home' %}" class="button">Home</a></button>
+<div>
+<iframe src="http://giphy.com/embed/ibolLe3mOqHE3PQTtk"  width="200" height="200" frameborder="0"
+            class="giphy-embed " allowfullscreen ></iframe>
+<div class="main">
+        <marquee class="marq"
+                 direction="down" loop="">
+            <div class="geek1">
+               Payment Successfully Done.....!!👍
+
+            </div>
+
+        </marquee>
+
+    </div>
+
+
+
+</div>
+</body>
+</html>
+
+
+

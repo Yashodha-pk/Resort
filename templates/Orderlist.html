@@ -1,0 +1,57 @@
+{% extends "commonadmin.html" %}
+{% block content %}
+{% load static %}
+<html>
+<head>
+ <style>
+        table{
+        width: 100%;
+        margin-top:0;
+        border-collapse: collapse;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align:center;
+        }
+        th{
+        background-color: #88304E;
+        color:white;
+        }
+        a{
+        color:black;
+        text-decoration:none;
+        }
+        td{
+
+        text-align:center;
+        font-size: 16px;
+        font-weight:bold;
+        border: 1px solid #ddd;
+        }
+         tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    </style>
+    </head>
+    <body style="background-color:lightgray">
+        <table border="1px solid gray" cellpadding="10px" cellspacing="0">
+            <tr>
+                <th>User Id</th>
+                <th>Event Id</th>
+                <th>Event Name</th>
+                <th>Card Number</th>
+                <th>Event Price</th>
+            </tr>
+            {% for d in data %}
+                <tr>
+                    <td>{{d.id}}</td>
+                    <td>{{d.eid}}</td>
+                    <td>{{d.etype}}</td>
+                    <td>{{d.cardnum}}</td>
+                    <td>{{d.eprice}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+{% endblock %}

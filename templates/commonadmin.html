@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Admin dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/commonadmin.css' %}" type="text/css">
+</head>
+<body>
+ <!-- Navbar with navigation links -->
+    <div class="navbar">
+        <a href="{% url 'admindashboard' %}" style="margin-left:110px;">Admin Dashboard</a>
+        <a href="{% url 'customerdetails' %}">User Details</a>
+         <a href="{% url 'Addevent' %}">Add Event</a>
+         <a href="{% url 'Eventlist' %}">Event List</a>
+        <a href="{% url 'Orderlist' %}">Ordered List</a>
+        <a href="{% url 'Logout' %}">Logout</a>
+
+
+    </div>
+
+    <!-- Main content block -->
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>

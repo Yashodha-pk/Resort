@@ -1,0 +1,75 @@
+{% extends "commonadmin.html" %}
+{% block content %}
+{% load static %}
+<html>
+    <head>
+<style>
+    body{
+    background-color:lightgray;
+    }
+    table{
+        margin-left:26%;
+        box-shadow: 0px 1px 1px 1px black;
+        padding:30px;
+        background-color:#BE5985;
+        border-radius:10px;
+
+    }
+    input ,select,textarea{
+    border-radius:5px;
+    padding:8px;
+    }
+    th{
+    font-weight:600;
+    color:white;
+    }
+    .button{
+    background-color:#73EC8B;
+    font-weight:bold;
+    font-size:16px;
+    border-radius:10px;
+    padding:10px;
+    }
+    h3{
+    text-align:center;
+    color:#243642;
+    font-weight:bold;
+    }
+</style>
+    </head>
+    <body>
+     <form action="{% url 'Addevent' %}" method="post" enctype="multipart/form-data">
+         <h3>{{msg}}</h3>
+         {% csrf_token %}
+         <table>
+             <tr>
+                 <th>Event Type</th>
+                 <td>
+                     <select name="etype">
+                         <option value="Birth Day">Birth Day</option>
+                         <option value="Marriage Event">Marriage Event</option>
+                         <option value="Anniversary Event">Anniversary Event</option>
+                         <option value="Naming Ceremony">Naming Ceremony</option>
+                     </select>
+                 </td>
+             </tr>
+             <tr>
+                 <th>Event Image</th>
+                 <td><input type="file" name="eimage" ></td>
+             </tr>
+             <tr>
+                 <th>Event Price</th>
+                 <td><input type="text" name="eprice" ></td>
+             </tr>
+             <tr>
+                 <th>Event Description</th>
+                 <td><textarea rows="4" cols="50" name="edes"></textarea></td>
+             </tr>
+             <tr>
+                 <td ><input type="submit" value="Add event" class="button"></td>
+             </tr>
+         </table>
+     </form>
+    </body>
+</html>
+{% endblock %}

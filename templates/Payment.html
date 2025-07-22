@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form-container{
+        margin-left:35%;
+        box-shadow: 0px 1px 1px 1px white;
+        padding:30px;
+        background-color:#D69ADE;
+        border-radius:10px;
+        width:30%;
+        margin-top:20px;
+    }
+    label{
+        font-size:21px;
+        color:black;
+        font-weight:800;
+        }
+    input{
+        padding:8px;
+        border-radius:5px;
+        background-color:#F4CCE9;
+    }
+    .input-group{
+        padding:10px;
+}
+ .button{
+        background-color:#FF9B17;
+        padding:10px 20px;
+        font-size:18px;
+        font-weight:600;
+        margin:10px 5px;
+        }
+        h2{
+        font-weight:900;
+        font-size:25px;
+
+        }
+    </style>
+</head>
+<body style="background-color:#F7CFD8;">
+<h2 style="text-align:center;">Payment Details</h2>
+ <div class="form-container">
+        <form action="{% url 'Payment' data.id %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="input-group">
+                <label for="cardnum">Card Number:</label>
+                <input type="text" id="cardnum" name="cardnum" maxlength="10" placeholder="Enter Card Number" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cvvnum">CVV Number:</label>
+                <input type="text" id="cvvnum" name="cvvnum" maxlength="3" placeholder="Enter CVV" required>
+            </div>
+
+            <div class="input-group">
+                <label for="edate">Expiry Date:</label>
+                <input type="date" id="edate" name="edate" placeholder="DD/MM/YY" required>
+            </div>
+
+            <div class="input-group">
+                <label for="user_id">User ID:</label>
+                <input type="text" id="user_id" name="user_id" value="{{ user_id }}" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="eid">Event ID:</label>
+                <input type="text" id="eid" name="eid" value="{{ data.id }}" readonly>
+            </div>
+
+            <div class="input-group">
+                <label for="etype">Event Name:</label>
+                <input type="text" id="etype" name="etype" value="{{ data.etype }}" readonly>
+            </div>
+<!--            <div class="input-group">-->
+<!--                <label for="eimage">Event Image</label>-->
+<!--                <input type="text" id="eimage" name="eimage" value="{{ data.eimage }}" readonly>-->
+<!--            </div>-->
+
+            <div class="input-group">
+                <label for="eprice">Price:</label>
+                <input type="text" id="eprice" name="eprice" value="{{ data.eprice }}" readonly>
+            </div>
+
+            <input type="submit" value="Pay Now" class="button">
+        </form>
+    </div>
+
+
+</body>
+</html>

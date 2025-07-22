@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{% static 'css/customeruser.css' %}" type="text/css">
+</head>
+<body>
+<nav class="navbar">
+<ul>
+<li><a href="{% url 'userdashboard' %}">User Dashboard</a></li>
+    <li><a href="{% url 'AvailableEvent' %}">Available Events</a></li>
+<li><a href="{% url 'Logout'%}">Logout</a></li>
+</ul>
+    </nav>
+</body>
+</html>
+{% block content %}
+{% endblock %}

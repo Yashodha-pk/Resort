@@ -1,0 +1,33 @@
+{% extends "commonuser.html" %}
+ {% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+        padding:50px;
+        background-color:#DD88CF;
+        border-radius:15px;
+        text-align:center;
+        width:50%;
+        margin-left:22%;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin-top:20px;">
+    <marquee behavior="" direction="" scrollamount="18"> <h1>Welcome to  🤩..... {{name}} </h1></marquee>
+</div>
+<div>
+    <h1> {{email}} </h1>
+</div>
+
+
+
+
+</body>
+</html>
+{% endblock %}
